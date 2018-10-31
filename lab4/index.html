@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Online Registration</title>
+	<style type="text/css">
+		a{
+			text-decoration: none;
+			}
+		a:visited
+		{
+			color: #1e6eba;
+		}
+		li {
+			float: left;
+
+		}
+		div	{
+			margin-left: 125px;
+			margin-right: 125px;
+		}
+		#tr1 {
+			background-color: #ffffff;
+		}
+		#tr2 {
+			background-color: #eeeeee;
+		}
+		#content{
+			margin-left: 175px;
+			margin-right: 175px;
+		}
+		table	{
+			width: 100%;
+			border: none;
+
+		}
+		tr {
+			background-color: #DFEFEE;
+		}
+		td {
+			width: 50%;
+		}
+		ul
+		{
+			list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #DFEFEE;
+		}
+	li {
+    float: left;
+    color: black;
+		}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+		
+	</style>
+</head>
+<body>
+	<div>
+		<table id="table1">
+			<tr id="tr1">
+				<td class="first"><img src="icai.png" align="top"></td>
+				<td>
+					<table>
+					<tr><td id="tr1">Search :</td><td id="tr1"><input type="text" name="query"></td><td  id="tr1"><img src="icaiimages.png"></td></tr>
+					</table>
+				</td>
+				<td width="20px">
+								&nbsp;
+								</td>
+				<td>
+					<table>
+					<tr><td id="tr1"><b>Follow Us</b></td></tr>
+					<tr><td id="tr1">
+			<a href=""><img src="t.png"></a>
+			<a href=""><img src="f.png"></a>
+			<a href=""><img src="y.png"></a>
+			<a href=""><img src="g.png"></a>
+			<a href=""><img src="l.png"></a>
+			</td></tr></table>
+				</td>
+			</tr>
+		<tr id="tr1">
+			<td></td>
+			<td colspan="3"><a href="#">Home|
+			e-Services |
+			e-Sahaayataa |
+			Feedback |
+			Digital Learning Hub |
+			CDS |
+			Contact Us |
+			Web Mail</a></td>
+		</tr>
+		</table>
+		<table><tr id="tr2">
+			<td><ul type="none" class="menu">
+			<li><a href="">Overview</a></li>
+			<li><a href="">Departments</a></li>
+			<li><a href="">Members</a></li>
+			<li><a href="">Students</a></li>
+			<li><a href="">Industry</a></li>
+			<li><a href="">Resources</a></li>
+			<li><a href="">Showcase</a></li>
+			<li><a href="">Other Imp. Links</a></li>
+			<li><a href="">FAQ</a></li>
+
+
+		</ul></td></tr>
+	</table>
+	</div>
+	<div id="content">
+<form name="register" onsubmit="return false" id="register">
+	<h3><center><b><u>Application Form for Registration to Common Proficiency Test Course</b></u></center></h3>
+	<table>
+	
+	<tr><td colspan="2">1.Name in Full (As per SSC X Certificate)</td></tr>
+	<tr><td>First Name: </td><td><input type="text" id="fname"  onkeydown="preventNumberInput(event)"
+               onkeyup="preventNumberInput(event)"></td></tr>
+	<tr><td>Middle Name: </td><td><input type="text" id="mname"   onkeydown="preventNumberInput(event)"
+               onkeyup="preventNumberInput(event)"></td></tr>
+	<tr><td>Last Name: </td><td><input type="text" id="lname"  onkeydown="preventNumberInput(event)"
+               onkeyup="preventNumberInput(event)"></td></tr>
+	<tr><td>2.Sex: </td><td><input type="radio" name="gender" checked="checked" >Male <input type="radio" name="gender"> Female</td></tr>
+	<tr><td>3.Date of Birth: </td><td><input type="date" id="dob" ></td></tr>
+	<tr><td>4.(a)	Father's Name: </td><td><input type="text" id="faname"  onkeydown="preventNumberInput(event)"
+               onkeyup="preventNumberInput(event)"></td></tr>
+	<tr><td>4.(b)	Mother's Name: </td><td><input type="text" id="maname"  onkeydown="preventNumberInput(event)"
+               onkeyup="preventNumberInput(event)"></td></tr>
+	<tr><td colspan="2">5.(a) Address for Communication:</td></tr>
+	<tr><td>Address Line 1: </td><td><input type="text" id="add1" ></td></tr>
+	<tr><td>Address Line 2: </td><td><input type="text" id="add2" ></td></tr>
+	<tr><td>Address Line 3: </td><td><input type="text" id="add3" ></td></tr>
+	<tr><td>Address Line 4: </td><td><input type="text" id="add4" ></td></tr>
+	<tr><td>City: </td>
+	<td><select id="city" >
+		<option value="select">Please Select</option>
+		<option value="Calicut">Calicut</option>
+		<option value="Thrissur">Thrissur</option>
+		<option value="Kochi">Kochi</option>
+		<option value="Trivandrum">Trivandrum</option>
+		</select>
+		State Code: <select id="state" >
+		<option value="select">Please Select</option>	
+		<option value="Kerala">Kerala</option>
+		<option value="Tamilnadu">Tamilnadu</option>
+		<option value="Karnataka">Karnataka</option>
+		<option value="Goa">Goa</option>
+		</select></td></tr>
+	<tr><td>Pin: </td><td><input type="number" id="pin" ><br> Phone No. with STD Code <input type="number" id="phone" ></td></tr>
+		<tr><td>Country:</td><td><select id="country">
+		<option value="Kerala">INDIA</option>
+		<option value="Tamilnadu">USA</option>
+		<option value="Karnataka">Germany</option>
+		<option value="Goa">United Kingdom</option>
+	</select></td></tr>
+	<tr><td>E-Mail ID </td><td><input type="email" id="email"  oninput="validateemail()" onblur="validateemail()"><br> Mobile No. <input type="number" id="mob" ></td></tr>
+	<tr><td colspan="2">
+5.(b) Permananent Address Same as Communication Address given in 5(a) above: Yes<input type="radio" name="addsame" onchange="copy()"> No <input type="radio" name="addsame" checked="checked" onchange="undocopy()"></td></tr>
+	<tr><td>Address Line 1: </td><td><input type="text" id="add5" ></td></tr>
+	<tr><td>Address Line 2: </td><td><input type="text" id="add6" ></td></tr>
+	<tr><td>Address Line 3: </td><td><input type="text" id="add7" ></td></tr>
+	<tr><td>Address Line 4: </td><td><input type="text" id="add8" ></td></tr>
+	<tr><td>City: </td><td><select id="city" >
+		<option value="select">Please Select</option>
+		<option value="Calicut">Calicut</option>
+		<option value="Thrissur">Thrissur</option>
+		<option value="Kochi">Kochi</option>
+		<option value="Trivandrum">Trivandrum</option>
+		</select>
+	State Code:<select id="state" >
+		<option value="select">Please Select</option>
+		<option value="Kerala">Kerala</option>
+		<option value="Tamilnadu">Tamilnadu</option>
+		<option value="Karnataka">Karnataka</option>
+		<option value="Goa">Goa</option>
+		</select></td></tr>
+		<tr><td>Pin: </td><td><input type="number" id="pin2" > 
+		Country:<select id="country"  >
+		<option value="Kerala">INDIA</option>
+		<option value="Tamilnadu">USA</option>
+		<option value="Karnataka">Germany</option>
+		<option value="Goa">United Kingdom</option>
+	</select></td></tr>
+	</table><br><br>
+	<center><input type="submit" name="submit" value="Submit" onclick="validate()"></center>
+	<center><input type="reset" name="reset" onclick="resetform()"></center>
+</form>
+</div>
+</body>
+<script type="text/javascript">
+
+		function	copy()
+		{	var	a=document.forms["register"]["add1"].value;
+			var	b=document.forms["register"]["add2"].value;
+			var	c=document.forms["register"]["add3"].value;
+			var	d=document.forms["register"]["add4"].value;
+			var	e=document.forms["register"]["pin"].value;
+			var	f=document.forms["register"]["city"].value;
+			var	g=document.forms["register"]["state"].value;
+			document.forms["register"]["add5"].value=a;
+			document.forms["register"]["add6"].value=b;
+			document.forms["register"]["add7"].value=c;
+			document.forms["register"]["add8"].value=d;
+			document.forms["register"]["pin2"].value=e;
+			document.forms["register"]["city2"].value=f;
+			document.forms["register"]["state2"].value=g;
+
+		}
+		function	undocopy()
+		{
+			document.forms["register"]["add5"].value="";
+			document.forms["register"]["add6"].value="";
+			document.forms["register"]["add7"].value="";
+			document.forms["register"]["add8"].value="";
+			document.forms["register"]["pin2"].value="";
+
+		}
+		function validateemail() {
+    var x = document.getElementById("a5").value;
+    var atpos = x.indexOf("@");
+    var dotpos = x.lastIndexOf(".");
+    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+        document.getElementById("a5").style.borderColor="red";}
+    else
+			{document.getElementById("a5").style.borderColor="#4CAF50"
+    }}
+			function validate()
+	{	
+		
+		var f=document.getElementById("fname").value;
+		var m=document.getElementById("mname").value;
+		var l=document.getElementById("lname").value;
+		var dob=document.getElementById("dob").value;
+		var fa=document.getElementById("faname").value;
+		var ma=document.getElementById("maname").value;
+		var add1=document.getElementById("add1").value;
+		var add2=document.getElementById("add2").value;
+		var add3=document.getElementById("add3").value;
+		var add4=document.getElementById("add4").value;
+		var add5=document.getElementById("add5").value;
+		var add6=document.getElementById("add6").value;
+		var add7=document.getElementById("add7").value;
+		var add8=document.getElementById("add8").value;
+		if (f==""||m==""||l==""||dob==""||fa==""||ma==""||add1==""||add2==""||add3==""||add4==""||add5==""||add6==""||add7==""||add8=="")
+			{
+				alert("All Fields are Mandatory");
+			}
+		else
+			{alert("Data Saved Successfully");}
+	}
+	function resetform()
+	{
+		document.getElementById("register").reset();
+	}
+	
+function preventNumberInput(e){
+    var keyCode = (e.keyCode ? e.keyCode : e.which);
+    if (keyCode > 47 && keyCode < 58 || keyCode > 95 && keyCode < 107 ){
+        e.preventDefault();
+    }
+}
+
+$(document).ready(function(){
+    $('#text_field').keypress(function(e) {
+        preventNumberInput(e);
+    });
+})
+	</script>
+</html>

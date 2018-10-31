@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Online Quiz</title>
+
+	<style type="text/css">
+		td {
+			width: 500px;
+			text-align: left;
+		}
+	</style>
+</head>
+<body>
+<div><center>
+<h1>Online Quiz Championship</h1>
+<form id="quiz">
+<table>
+	<tr>
+	<td>
+		<h3>1. What does HTML stand for?</h3>
+		<ul type="none">
+		<li id="correct1"><input type="radio" name="q1" id="q1-A" value="A" />
+		A)  Hyper Text Markup Language</li>
+		<li ><input type="radio" name="q1" id="q1-B" value="B" />
+		B)  Home Tool Markup Language</li>
+		<li><input type="radio" name="q1" id="q1-C" value="C">
+		C)  Hyperlinks and Text Markup Language</li>
+		<li><input type="radio" name="q1" id="q1-D" value="D">
+		D) None of These.</li></ol>
+	</td></tr>
+	<tr>
+	<td>
+		<h3>2. Who is making the Web standards?</h3>
+		<ul type="none"><li><input type="radio" name="q2" id="q2-A" value="A" />
+		A) Mozilla</li>
+		<li id="correct2"><input type="radio" name="q2" id="q2-B" value="B" />
+		B) The World Wide Web Consortium</li>
+		<li><input type="radio" name="q2" id="q2-C" value="C">
+		C) Google</li>
+		<li><input type="radio" name="q2" id="q2-D" value="D">
+		D) Microsoft</li></ul>
+	</td>
+	</tr>
+	<tr>
+	<td>
+		<h3>3. What does CSS stand for?</h3><ul type="none">
+		<li><input type="radio" name="q3" id="q3-A" value="A" />
+		A)  Computer Style Sheets</li>
+		<li><input type="radio" name="q3" id="q3-B" value="B" />
+		B)  Creative Style Sheets</li>
+		<li id="correct3"><input type="radio" name="q3" id="q3-C" value="C">
+		C)  Cascading Style Sheets</li>
+		<li><input type="radio" name="q3" id="q3-D" value="D">
+		D)  Colorful Style Sheets</li></ul>
+	</td>
+	</tr>
+	<tr>
+	<td>
+		<h3>4. What does PHP stand for?</h3>
+		<ul type="none">
+		<li><input type="radio" name="q4" id="q4-A" value="A" />
+		A)  Private Home Page</li>
+		<li><input type="radio" name="q4" id="q4-B" value="B" />
+		B)  Primitive HyperText Protocol</li>
+		<li><input type="radio" name="q4" id="q4-C" value="C">
+		C)  Personal Hypertext Processor</li>
+		<li id="correct4"><input type="radio" name="q4" id="q4-D" value="D">
+		D) PHP: Hypertext Preprocessor</li></ul>
+	</td>
+	</tr>
+	<tr><td height="25px"></td></tr>
+	<tr><td colspan="2"><center><input type="button" name="btn" onclick="calc()" value="Submit">&nbsp
+		<input type="reset" name="btn" onclick="reset()" value="Reset"></center>
+</td>
+	</tr>
+	</table></center>
+</form>
+</div>
+<script type="text/javascript">
+	function calc()
+{
+	
+	var ans1=quiz.q1.value;
+	var ans2=quiz.q2.value;
+	var ans3=quiz.q3.value;
+	var ans4=quiz.q4.value;
+	var noq=document.getElementsByTagName('ul').length;
+	var score=0;
+	if (ans1=="A") {score++;}
+	if (ans2=="B") {score++;}
+	if (ans3=="C") {score++;}
+	if (ans4=="D") {score++;}
+	alert("Your Score is "+score+" /"+noq);
+	document.getElementById("correct1").style.color="green";
+	document.getElementById("correct2").style.color="green";
+	document.getElementById("correct3").style.color="green";
+	document.getElementById("correct4").style.color="green";
+
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+
+a	{
+	text-decoration: none;
+}
+a:hover {
+    color: hotpink;
+}
+
+li	{
+	color: red;
+
+}
+
+body {
+    background-image: url("img_tree.png");
+    background-color: ;
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+}

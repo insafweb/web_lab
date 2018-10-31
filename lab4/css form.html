@@ -1,0 +1,112 @@
+<html>
+<body onload="msg()">
+	<script type="text/javascript">
+	function ip(n)
+	{
+		if(document.getElementById("a"+n).value=="")
+			document.getElementById("a"+n).style.borderColor="red";
+		else
+			document.getElementById("a"+n).style.borderColor="#4CAF50";
+	}
+	function validateemail() {
+    var x = document.getElementById("a5").value;
+    var atpos = x.indexOf("@");
+    var dotpos = x.lastIndexOf(".");
+    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+        document.getElementById("a5").style.borderColor="red";}
+    else
+			{document.getElementById("a5").style.borderColor="#4CAF50"
+    }
+}
+	function validate()
+	{	
+		var n=document.getElementById("a1").value;
+		var a=document.getElementById("a2").value;
+		var f=document.getElementById("a3").value;
+		var u=document.getElementById("a5").value;
+		var p=document.getElementById("a6").value;
+		var cp=document.getElementById("a7").value;
+		if (n==""||a==""||f==""||u==""||p==""||cp=="")
+			{
+				alert("All Fields are Mandatory");
+			}
+		else if(p!=cp)
+		{
+			alert("Password mismatch")
+		}
+		else
+			{alert("Data Saved Successfully");}
+	}
+	</script>
+	<style type="text/css">
+	h3
+	{
+		font-family: verdana;
+		text-align: center;
+	}
+	div
+	{
+		background-color: #f2f2f2;
+		padding-top: 100px;
+		padding-bottom:100px ;
+		padding-left: 300px;
+		padding-right: 300px;
+		border-radius: 50px;
+		border-style: none;
+		background-image: url("images/reg1.jpg");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-attachment: fixed;
+	}
+	input[type=text],[type=number],[type=password],select
+	{
+		width: 100%;
+		padding: 12px 20px;
+		margin: 8px 0;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+
+	}
+	input[type=submit]
+	{
+		width: 100%;
+		background-color: #4CAF50;
+		color: white;
+		padding: 8px 0px;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+	}
+	input[type=submit]:hover
+	{
+		background-color: #45a049;
+	}
+	</style>
+
+<form method="post" action="" name="form1"  >
+	<div>
+		<h3>Registration Form</h3>
+	<label for="name">Name</label>
+	<input type="text" id="a1" placeholder="Full Name" oninput="ip(1)" onblur="ip(1)"/ ><br>
+	<label for="age">Age</label>
+	<input type="number" id="a2" placeholder="Age" oninput="ip(2)" onblur="ip(2)"><br>
+	<label for="gender">Gender&nbsp</label>
+	<input type="radio"/ name=gender id="gender">Male<input type="radio" name=gender />Female<br>
+	<label for="gender">Name of Father</label>
+	<input type="text"/ name="nof" id="a3" placeholder="Name of Father"  oninput="ip(3)" onblur="ip(3)"><br>
+	<label for="qualification">Qualification</label>
+	<select name="qualification" id="a4" oninput="ip(4)" onblur="ip(4)" >
+	<option>Choose</option><option>MCA</option><option>M.Tech</option><option>M.Sc</option>
+     </select><br>
+     <label for="uname">Username(E-mail)</label>
+     <input type="text" id="a5" placeholder="Email" oninput="validateemail()" onblur="validateemail()"/><br>
+     <label for="pword">Password</label>
+     <input type="password" name="pword" id="a6" placeholder="Password" oninput="ip(6)" onblur="ip(6)"/><br>
+     <label for="cpword">Confirm Password</label>
+     <input type="password" name="cpword" id="a7" placeholder="Confirm Password" oninput="ip(7)" onblur="ip(7)"/><br>
+     <input type="submit" name="submit" value="Submit" onclick="validate()">
+     </div> 
+</form>
+</div>
+</body>
+</html>
